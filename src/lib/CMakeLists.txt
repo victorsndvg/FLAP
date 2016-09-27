@@ -9,6 +9,7 @@ SET(LIB_SRC ${LIB_SRC} PARENT_SCOPE)
 # Library target
 #################################################################
 ADD_LIBRARY(${LIB} ${LIB_SRC})
+ADD_DEPENDENCIES(${LIB} ${PENF_LIB})
 
 #################################################################
 # External projects
