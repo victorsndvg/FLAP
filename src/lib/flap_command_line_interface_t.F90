@@ -117,6 +117,7 @@ contains
   endif
   if (allocated(self%examples))  deallocate(self%examples)
   self%disable_hv = .false.
+  self%is_parsed_ = .false.
   return
   !---------------------------------------------------------------------------------------------------------------------------------
   endsubroutine free
@@ -516,6 +517,7 @@ contains
   !---------------------------------------------------------------------------------------------------------------------------------
 
   !---------------------------------------------------------------------------------------------------------------------------------
+  if (present(error)) error = 0
   if (self%is_parsed_) return
 
   ! add help and version switches if not done by user
